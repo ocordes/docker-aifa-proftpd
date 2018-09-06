@@ -14,8 +14,7 @@ RUN chmod a+x ./entrypoint.sh
 # FTP ROOT
 RUN mkdir /ftp
 
-EXPOSE 21
-EXPOSE 20
+EXPOSE 21 49152-49407
 
 ENTRYPOINT ["./entrypoint.sh"]
 
