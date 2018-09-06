@@ -18,4 +18,4 @@ echo $PWD_SALT > /etc/proftpd/.salt
 # allow proftpd writing custom logs
 chown -R proftpd:proftpd /var/log/proftpd
 
-exec /usr/local/sbin/proftpd --nodaemon $PROFTPD_ARGS
+exec /usr/sbin/proftpd --nodaemon $PROFTPD_ARGS
