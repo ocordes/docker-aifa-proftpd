@@ -1,11 +1,11 @@
 FROM ubuntu
 
 RUN apt-get update -y
-RUN apt-get install -y proftpd
+RUN apt-get install -y proftpd sudo less
 
-ADD launch /launch
-ADD proftpd.conf /etc/proftpd/proftpd.conf
-RUN sudo chown root:root /etc/proftpd/proftpd.conf
+COPY launch /launch
+#ADD proftpd.conf /etc/proftpd/proftpd.conf
+#RUN sudo chown root:root /etc/proftpd/proftpd.conf
 RUN mkdir /ftp
 
 EXPOSE 21
