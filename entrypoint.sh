@@ -15,5 +15,6 @@ fi
 
 echo $PWD_SALT > /etc/proftpd/.salt
 
+tail -f /var/log/proftpd/xferlog &
 
 exec /usr/sbin/proftpd --nodaemon $PROFTPD_ARGS
