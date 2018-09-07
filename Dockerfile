@@ -8,6 +8,7 @@ COPY entrypoint.sh ./entrypoint.sh
 RUN chmod a+x ./entrypoint.sh
 
 #RUN ln -sf /dev/stdout /var/log/proftpd/xferlog
+RUN touch  /var/log/proftpd/xferlog
 
 # FTP ROOT
 RUN mkdir /ftp
