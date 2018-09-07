@@ -14,4 +14,5 @@ RUN mkdir /ftp
 
 EXPOSE 21 49152-49407
 
-ENTRYPOINT ["./entrypoint.sh"]
+#ENTRYPOINT ["./entrypoint.sh"]
+CMD ["/usr/sbin/proftpd","--nodaemon" ]
