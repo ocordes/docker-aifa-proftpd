@@ -1,8 +1,6 @@
-FROM ubuntu:18.04
+FROM alpine:3.8
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends proftpd less \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache proftpd
 
 COPY entrypoint.sh ./entrypoint.sh
 RUN chmod a+x ./entrypoint.sh
