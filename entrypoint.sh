@@ -1,7 +1,5 @@
 #!/bin/sh
 
-env
-
 PROFTPD_ARGS="-DMOD_EXEC=$MOD_EXEC -DMOD_TLS=$MOD_TLS -DMOD_VROOT=$MOD_VROOT -DVERBOSE=$FTP_VERBOSE"
 
 if [ "$MASQ_ADDR" = "AWS" ]; then
@@ -14,7 +12,5 @@ fi
 
 
 echo $PWD_SALT > /etc/proftpd/.salt
-
-tail -f /var/log/proftpd/xferlog &
 
 exec /usr/sbin/proftpd --nodaemon $PROFTPD_ARGS
